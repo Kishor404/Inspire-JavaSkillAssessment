@@ -1,0 +1,357 @@
+:root {
+  --db-bg: #f5f7fb;
+  --db-card-bg: #ffffff;
+  --db-border: #e2e8f0;
+  --db-primary: #2563eb;
+  --db-primary-soft: #eff4ff;
+  --db-accent: #10b981;
+  --db-text-main: #0f172a;
+  --db-text-muted: #6b7280;
+  --db-radius-lg: 22px;
+  --db-shadow-soft: 0 18px 45px rgba(15, 23, 42, 0.07);
+}
+
+/* Page background */
+.db-root {
+  min-height: 100vh;
+  background: radial-gradient(circle at top, #e0edff 0, #f5f7fb 40%, #f9fafb 100%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 24px;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+}
+
+/* Main card */
+.db-card {
+  width: 100%;
+  max-width: 1000px;
+  background: var(--db-card-bg);
+  border-radius: var(--db-radius-lg);
+  padding: 24px 28px 18px;
+  box-shadow: var(--db-shadow-soft);
+  border: 1px solid rgba(226, 232, 240, 0.8);
+}
+
+/* Top bar */
+.db-topbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 16px;
+  margin-bottom: 20px;
+}
+
+.db-user-block {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+}
+
+.db-avatar {
+  width: 52px;
+  height: 52px;
+  border-radius: 999px;
+  background-color: #016fb9;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #f9fafb;
+  font-weight: 700;
+  font-size: 20px;
+}
+
+/* Typography */
+.db-small {
+  font-size: 12px;
+  color: var(--db-text-muted);
+  margin: 0;
+}
+
+.db-small-muted {
+  font-size: 12px;
+  color: var(--db-text-muted);
+}
+
+.db-title {
+  margin: 2px 0 0 0;
+  font-size: 20px;
+  font-weight: 600;
+  color: var(--db-text-main);
+}
+
+.db-username {
+  margin: 2px 0 0 0;
+  font-size: 12px;
+  color: #9ca3af;
+}
+
+/* Bank brand */
+.db-bank-brand {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.db-brand-icon {
+  width: 30px;
+  height: 30px;
+  border-radius: 10px;
+  background: var(--db-primary-soft);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--db-primary);
+  font-size: 16px;
+  font-weight: 600;
+}
+
+.db-bank-text {
+  display: flex;
+  flex-direction: column;
+}
+
+.db-bank-name {
+  font-size: 13px;
+  font-weight: 600;
+  color: var(--db-text-main);
+}
+
+.db-bank-tagline {
+  font-size: 11px;
+  color: var(--db-text-muted);
+}
+
+/* Middle section */
+.db-main-grid {
+  display: grid;
+  grid-template-columns: 1.4fr 1fr;
+  gap: 16px;
+  margin-bottom: 20px;
+}
+
+/* Balance card */
+.db-balance-card {
+  background: linear-gradient(135deg, #eff6ff, #ecfdf5);
+  border-radius: 18px;
+  padding: 16px 18px;
+  border: 1px solid #dbeafe;
+}
+
+.db-label {
+  font-size: 12px;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: #6b7280;
+  margin: 0 0 4px 0;
+}
+
+.db-balance {
+  font-size: 28px;
+  font-weight: 700;
+  margin: 0 0 4px 0;
+  color: #1e293b;
+}
+
+/* Account info panel */
+.db-account-info {
+  border-radius: 18px;
+  padding: 16px 18px;
+  border: 1px solid var(--db-border);
+  background: #f9fafb;
+}
+
+.db-info-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 8px;
+}
+
+.db-info-label {
+  font-size: 12px;
+  color: var(--db-text-muted);
+}
+
+.db-info-value {
+  font-size: 13px;
+  font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas,
+    "Liberation Mono", "Courier New", monospace;
+  padding: 4px 9px;
+  border-radius: 999px;
+  border: 1px dashed #cbd5f5;
+  background: #ffffff;
+}
+
+.db-info-pill {
+  font-size: 12px;
+  padding: 3px 9px;
+  border-radius: 999px;
+  background: var(--db-primary-soft);
+  color: var(--db-primary);
+}
+
+/* Status */
+.db-status-dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 999px;
+  background: var(--db-accent);
+  display: inline-block;
+  margin-right: 4px;
+}
+
+.db-status-text {
+  font-size: 12px;
+  color: var(--db-text-main);
+}
+
+/* Actions section */
+.db-actions-section {
+  margin-top: 8px;
+}
+
+.db-actions-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  margin-bottom: 10px;
+}
+
+.db-actions-header h3 {
+  margin: 0;
+  font-size: 15px;
+  font-weight: 600;
+  color: var(--db-text-main);
+}
+
+/* Actions grid */
+.db-actions-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(210px, 1fr));
+  gap: 10px;
+}
+
+.db-action-card {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 10px 12px;
+  border-radius: 14px;
+  background: #ffffff;
+  border: 1px solid var(--db-border);
+  text-decoration: none;
+  transition: transform 0.1s ease-out, box-shadow 0.1s ease-out,
+    border-color 0.1s ease-out, background 0.1s ease-out;
+}
+
+.db-action-card:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 10px 30px rgba(148, 163, 184, 0.25);
+  border-color: #bfdbfe;
+  background: #f9fbff;
+}
+
+.db-action-icon {
+  width: 34px;
+  height: 34px;
+  border-radius: 999px;
+  border: 1px solid #e5e7eb;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 18px;
+  font-weight: 600;
+  color: var(--db-primary);
+  background: #f4f4ff;
+}
+
+.db-action-texts {
+  display: flex;
+  flex-direction: column;
+}
+
+.db-action-title {
+  font-size: 13px;
+  font-weight: 600;
+  color: var(--db-text-main);
+}
+
+.db-action-subtitle {
+  font-size: 11px;
+  color: var(--db-text-muted);
+}
+
+/* Footer */
+.db-footer {
+  margin-top: 14px;
+  padding-top: 8px;
+  border-top: 1px dashed #e5e7eb;
+  text-align: right;
+}
+
+/* Loading state */
+.db-loading .db-skel {
+  border-radius: 999px;
+  background: linear-gradient(90deg, #e5e7eb 25%, #f3f4f6 50%, #e5e7eb 75%);
+  background-size: 200% 100%;
+  animation: db-skel-loading 1.2s infinite;
+}
+
+.db-skel-title {
+  width: 40%;
+  height: 18px;
+  margin-bottom: 16px;
+}
+
+.db-skel-line {
+  width: 60%;
+  height: 12px;
+  margin-bottom: 8px;
+}
+
+.db-skel-buttons {
+  width: 100%;
+  height: 70px;
+  margin-top: 14px;
+  border-radius: 16px;
+}
+
+@keyframes db-skel-loading {
+  0% {
+    background-position-x: 200%;
+  }
+  100% {
+    background-position-x: -200%;
+  }
+}
+
+/* Error */
+.db-error {
+  text-align: center;
+}
+
+.db-error h2 {
+  margin-bottom: 8px;
+}
+
+.db-error p {
+  font-size: 14px;
+  color: #b91c1c;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .db-card {
+    padding: 18px 16px 16px;
+  }
+
+  .db-topbar {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .db-main-grid {
+    grid-template-columns: 1fr;
+  }
+}

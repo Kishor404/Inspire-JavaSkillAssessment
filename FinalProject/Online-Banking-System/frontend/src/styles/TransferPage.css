@@ -1,0 +1,182 @@
+:root {
+  --db-bg: #f5f7fb;
+  --db-card-bg: #ffffff;
+  --db-border: #e2e8f0;
+  --db-primary: #2563eb;
+  --db-primary-soft: #eff4ff;
+  --db-accent: #10b981;
+  --db-text-main: #0f172a;
+  --db-text-muted: #6b7280;
+  --db-radius-lg: 22px;
+  --db-shadow-soft: 0 18px 45px rgba(15, 23, 42, 0.07);
+}
+
+/* Background */
+.transfer-root {
+  min-height: 100vh;
+  background: radial-gradient(circle at top, #e0edff 0, #f5f7fb 40%, #f9fafb 100%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 24px;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+}
+
+/* Card */
+.transfer-card {
+  width: 100%;
+  max-width: 520px;
+  background: var(--db-card-bg);
+  border-radius: var(--db-radius-lg);
+  padding: 24px 24px 18px;
+  box-shadow: var(--db-shadow-soft);
+  border: 1px solid rgba(226, 232, 240, 0.9);
+}
+
+/* Header */
+.transfer-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 12px;
+  margin-bottom: 18px;
+}
+
+.transfer-title {
+  margin: 0;
+  font-size: 20px;
+  font-weight: 600;
+  color: var(--db-text-main);
+}
+
+.transfer-subtitle {
+  margin: 4px 0 0 0;
+  font-size: 13px;
+  color: var(--db-text-muted);
+}
+
+/* Badge */
+.transfer-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 4px 8px;
+  border-radius: 999px;
+  background: var(--db-primary-soft);
+  font-size: 11px;
+  color: var(--db-primary);
+  border: 1px solid #dbeafe;
+}
+
+.transfer-badge-dot {
+  width: 7px;
+  height: 7px;
+  border-radius: 999px;
+  background: var(--db-accent);
+}
+
+/* Form */
+.transfer-form {
+  margin-top: 4px;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.transfer-label {
+  font-size: 13px;
+  font-weight: 500;
+  color: var(--db-text-main);
+}
+
+.transfer-input {
+  width: 90%;
+  border-radius: 12px;
+  border: 1px solid var(--db-border);
+  padding: 10px 11px;
+  font-size: 14px;
+  outline: none;
+  transition: border-color 0.08s ease-out, box-shadow 0.08s ease-out,
+    background 0.08s ease-out;
+  background: #f9fafb;
+}
+
+.transfer-input::placeholder {
+  color: #9ca3af;
+}
+
+.transfer-input:focus {
+  border-color: #93c5fd;
+  background: #ffffff;
+  box-shadow: 0 0 0 1px #bfdbfe;
+}
+
+/* Hint */
+.transfer-hint {
+  margin: 2px 0 0 0;
+  font-size: 11px;
+  color: var(--db-text-muted);
+}
+
+/* Error */
+.transfer-error {
+  margin: 3px 0 0 0;
+  font-size: 12px;
+  color: #b91c1c;
+}
+
+/* Button */
+.transfer-button {
+  margin-top: 10px;
+  width: 100%;
+  border: none;
+  border-radius: 10px;
+  padding: 10px 14px;
+  font-size: 14px;
+  font-weight: 600;
+  cursor: pointer;
+  background: linear-gradient(135deg, #2563eb, #3b82f6);
+  color: #f9fafb;
+  transition: transform 0.08s ease-out, box-shadow 0.08s ease-out,
+    opacity 0.08s ease-out;
+}
+
+.transfer-button:hover {
+  transform: translateY(-1px);
+}
+
+.transfer-button:active {
+  transform: translateY(0);
+}
+
+.transfer-button:disabled {
+  opacity: 0.7;
+  cursor: not-allowed;
+  box-shadow: none;
+}
+
+/* Footer */
+.transfer-footer {
+  margin-top: 14px;
+  padding-top: 8px;
+  border-top: 1px dashed #e5e7eb;
+  display: flex;
+  justify-content: flex-end;
+}
+
+.transfer-back-link {
+  font-size: 12px;
+  text-decoration: none;
+  color: var(--db-primary);
+}
+
+.transfer-back-link:hover {
+  text-decoration: underline;
+}
+
+/* Mobile */
+@media (max-width: 480px) {
+  .transfer-card {
+    padding: 18px 16px 14px;
+  }
+}
